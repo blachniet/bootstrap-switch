@@ -9,10 +9,10 @@
     <licenseUrl>https://github.com/nostalgiaz/bootstrap-switch/blob/master/LICENSE</licenseUrl>
     <projectUrl>http://www.bootstrap-switch.org/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>bootstrap switch javascript js</description>
+    <description>Turn checkboxes and radio buttons in toggle switches.</description>
     <releaseNotes></releaseNotes>
     <copyright>Copyright 2014</copyright>
-    <tags>bootstrap switch toggle</tags>
+    <tags>bootstrap switch javascript js</tags>
     <dependencies>
         <dependency id="bootstrap" version="2.3.1" />
     </dependencies>
