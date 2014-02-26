@@ -1,110 +1,53 @@
-Bootstrap-switch
-========================
+# Bootstrap Switch 
+[![Dependency Status](https://david-dm.org/nostalgiaz/bootstrap-switch.svg?theme=shields.io)](https://david-dm.org/nostalgiaz/bootstrap-switch)
+[![devDependency Status](https://david-dm.org/nostalgiaz/bootstrap-switch/dev-status.svg?theme=shields.io)](https://david-dm.org/nostalgiaz/bootstrap-switch#info=devDependencies)
+[![NPM Version](http://img.shields.io/npm/v/bootstrap-switch.svg)](https://www.npmjs.org/)
+[![Gittip LostCrew](http://img.shields.io/gittip/LostCrew.svg)](https://www.gittip.com/LostCrew)
 
-Demo
-----
-http://www.larentis.eu/switch/
+Turn checkboxes and radio buttons in toggle switches.
 
-Usage
------
-Just include Twitter Bootstrap, jQuery, Bootstrap Switch CSS and Javascript
+**Version 3 is almost ready and features a entire API redesign and source rewriting. Knowing that, your help would be decisive to ship it within days. Give the branch `3.0` a try and post any bugs you might encounter or improvements you would like to integrate in the final release.
+With heart, many thanks.**
+
+## Demo and Documentation
+http://www.bootstrap-switch.org
+
+## Usage
+
+Include the dependencies: jQuery, Bootstrap and Bootstrap Switch CSS + Javascript:
+
 ``` html
-<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8;" />
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css">
-<link rel="stylesheet" href="bootstrapSwitch.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script src="bootstrapSwitch.js"></script>  // master
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/1.3/bootstrapSwitch.min.js">  // from cdnjs.com
+[...]
+<link href="bootstrap.css" rel="stylesheet">
+<link href="bootstrap-switch.css" rel="stylesheet">
+<script src="jquery.js"></script>
+<script src="bootstrap-switch.js"></script>
+[...]
 ```
 
-Less
-----
-If you want to use your bootstrap vars edit bootstrapSwitch.less and then compile the less file
-``` bash
-lessc static/less/bootstrapSwitch.less static/stylesheets/bootstrapSwitch.css
+Add your checkbox:
+
+```html
+<input type="checkbox" name="my-checkbox" checked>
 ```
 
-Basic Example
--------------
-``` html
-<div class="switch">
-    <input type="checkbox">
-</div>
+Initialize Bootstrap Switch on it:
+
+```javascript
+$("[name='my-checkbox']").bootstrapSwitch();
 ```
 
-Large, small or mini
---------------------
-``` html
-<div class="switch switch-large">  <!-- switch-large, switch-small or switch-mini -->
-    <input type="checkbox">
-</div>
-```
+Enjoy.
 
-Colors
-------
-``` html
-<div class="switch" data-on="danger" data-off="warning">  <!-- primary, info, success, warning and danger -->
-    <input type="checkbox">
-</div>
-```
+## Less
 
-Animation
----------
-``` html
-<div class="switch" data-animated="false">
-    <input type="checkbox">
-</div>
-```
+If you want to use your bootstrap variables, include `bootstrap-switch.less` in your compilation stack. You can even choose among Bootstrap versions 2.3.2 or 3.*.* compatible source.
 
-Text
------
-``` html
-<div class="switch" data-on-label="SI" data-off-label="NO">
-    <input type="checkbox">
-</div>
-```
+## Supported browsers
 
-HTML Text
-----------
-``` html
-<div class="switch" data-on-label="<i class='icon-ok icon-white'></i>" data-off-label="<i class='icon-remove'></i>">
-    <input type="checkbox">
-</div>
-```
+IE8+ and all the other modern browsers (until proven otherwise: submit a issue and let's see what we can do).
 
-Initial values
---------------
-``` html
-<div class="switch">
-    <input type="checkbox" checked="checked" disabled="disabled">
-</div>
-```
+## License
 
-Event handler
--------------
-``` javascript
-$('#mySwitch').on('switch-change', function (e, data) {
-    var $el = $(data.el)
-      , value = data.value;
-    console.log(e, $el, value);
-});
-```
-
-Methods
--------
-``` javascript
-$('#mySwitch').bootstrapSwitch('toggleActivation');
-$('#mySwitch').bootstrapSwitch('isActive');
-$('#mySwitch').bootstrapSwitch('setActive', false);
-$('#mySwitch').bootstrapSwitch('setActive', true);
-$('#mySwitch').bootstrapSwitch('toggleState');
-$('#mySwitch').bootstrapSwitch('setState', true);
-$('#mySwitch').bootstrapSwitch('status');  // returns true or false
-$('#mySwitch').bootstrapSwitch('destroy');
-```
-
-License
--------
 Licensed under the Apache License, Version 2.0
 http://www.apache.org/licenses/LICENSE-2.0
